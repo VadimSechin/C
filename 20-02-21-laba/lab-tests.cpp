@@ -1,14 +1,16 @@
-/* #include <iostream>
+#include <iostream>
 #include <cmath>
 #include <random>
 
-// второй вопрос
+// узкие моменты
+
 int rndint(int min, int max) {
     std::random_device dev;
     std::mt19937 rng(dev());
     std::uniform_int_distribution<int> dist(min, max);
     return dist(rng);
 }
+
 
 void Check(int width, int height, int &num, int x_coord[], int y_coord[], int x_mem[], int y_mem[], bool stopped[]) {
     for (int i = 0; i < num; i++) {
@@ -73,11 +75,11 @@ int model(int width, int height, int num, int x_coord[], int y_coord[]) {
     }
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-            //std::cout << visual[i * width + j] << " ";
+            std::cout << visual[i * width + j] << " ";
         }
-        //std::cout << std::endl;
+        std::cout << std::endl;
     }
-    //std::cout << std::endl;
+    std::cout << std::endl;
 
     Check(width, height, num, x_coord, y_coord, x_mem, y_mem, stopped);
     all_unmobile = true;
@@ -112,54 +114,22 @@ int model(int width, int height, int num, int x_coord[], int y_coord[]) {
         }
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                //std::cout << visual[i * width + j] << " ";
+                std::cout << visual[i * width + j] << " ";
             }
-            //std::cout << std::endl;
+            std::cout << std::endl;
         }
-        //std::cout << std::endl;
+        std::cout << std::endl;
     }
     return time;
 }
 
-void show(){
-    int num = 10, time_sum = 0, accuracy = 100;
-
-    int demention_begin = 5;
-    int demention_step = 2;
-    int steps = 5;
-    int dots_max = num + steps;
-
-    int x_coord[dots_max];
-    int y_coord[dots_max];
-
-    for(int k = demention_begin; k < demention_begin + demention_step*steps ; k += demention_step){
-        for(int i = 1; i <= dots_max; i += 1){
-            num = i;
-            time_sum = 0;
-            for(int j = 0; j < accuracy; j++) {
-                create_coords(num, k, k, x_coord, y_coord);
-                time_sum += model(k, k, num, x_coord, y_coord);
-                }
-            std::cout << (float)time_sum / (float)accuracy << ',' << ' ';
-            }
-        std::cout << std::endl;
-        std::cout << std::endl;
-    }
-
-//    for (int i = 5; i <= 5; i += 2) {
-//        for (int j = 0; j < accuracy; j++) {
-//            x_coord[0] = i / 2;
-//            y_coord[0] = i / 2;
-//            time_sum += model(i, i, num, x_coord, y_coord);
-//        }
-//        std::cout << "aboba" << (float)time_sum / (float)accuracy << ' ';
-//        time_sum = 0;
-//        std::cout << std::endl;
-//    }
-}
 
 int main() {
-    show();
+    int num = 3, width = 5, height = 5, time_sum = 0, accuracy = 1;
+    int x_coord[3] = {0, 1, 2};
+    int y_coord[3] = {0, 1, 2};
+
+//    create_coords(num, width, height, x_coord, y_coord);
+    std::cout << model(width, height, num, x_coord, y_coord);
     return 0;
 }
-*/

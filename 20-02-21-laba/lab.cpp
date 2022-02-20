@@ -2,6 +2,9 @@
 #include <cmath>
 #include <random>
 
+
+// первый вопрос
+
 int rndint(int min, int max) {
     std::random_device dev;
     std::mt19937 rng(dev());

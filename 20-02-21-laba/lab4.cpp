@@ -1,8 +1,8 @@
-/* #include <iostream>
+#include <iostream>
 #include <cmath>
 #include <random>
 
-// второй вопрос
+// третий вопрос с одномерным случаем часть 2
 int rndint(int min, int max) {
     std::random_device dev;
     std::mt19937 rng(dev());
@@ -13,16 +13,15 @@ int rndint(int min, int max) {
 void Check(int width, int height, int &num, int x_coord[], int y_coord[], int x_mem[], int y_mem[], bool stopped[]) {
     for (int i = 0; i < num; i++) {
         for (int j = i + 1; j < num; j++) {
-            if ((abs(x_coord[i] - x_coord[j]) + abs(y_coord[i] - y_coord[j]) <= 1)) {
-                if ((x_coord[i] == x_coord[j]) and (y_coord[i] == y_coord[j])) {
+            if ((abs(x_coord[i] - x_coord[j])) <= 1) {
+                if ((x_coord[i] == x_coord[j]) ) {
                     x_coord[j] = x_mem[j];
-                    y_coord[j] = y_mem[j];
                 }
                 stopped[i] = true;
                 stopped[j] = true;
             }
         }
-        if ((x_coord[i] == 0) or (x_coord[i] == width - 1) or (y_coord[i] == 0) or (y_coord[i] == height - 1)) {
+        if ((x_coord[i] == 0) or (x_coord[i] == width - 1)) {
             stopped[i] = true;
         }
     }
@@ -93,11 +92,9 @@ int model(int width, int height, int num, int x_coord[], int y_coord[]) {
         }
         for (int i = 0; i < num; i++) {
             if (not stopped[i]) {
-                rnd_number = rndint(1, 4);
+                rnd_number = rndint(1, 2);
                 if (rnd_number == 1) { x_coord[i]++; }
-                if (rnd_number == 2) { y_coord[i]++; }
-                if (rnd_number == 3) { x_coord[i]--; }
-                if (rnd_number == 4) { y_coord[i]--; }
+                if (rnd_number == 2) { x_coord[i]--; }
             }
         }
         Check(width, height, num, x_coord, y_coord, x_mem, y_mem, stopped);
@@ -122,12 +119,12 @@ int model(int width, int height, int num, int x_coord[], int y_coord[]) {
 }
 
 void show(){
-    int num = 10, time_sum = 0, accuracy = 100;
+    int num = 1, time_sum = 0, accuracy = 100;
 
-    int demention_begin = 5;
+    int demention_begin = 10;
     int demention_step = 2;
     int steps = 5;
-    int dots_max = num + steps;
+    int dots_max = 6;
 
     int x_coord[dots_max];
     int y_coord[dots_max];
@@ -137,8 +134,8 @@ void show(){
             num = i;
             time_sum = 0;
             for(int j = 0; j < accuracy; j++) {
-                create_coords(num, k, k, x_coord, y_coord);
-                time_sum += model(k, k, num, x_coord, y_coord);
+                create_coords(num, k, 1, x_coord, y_coord);
+                time_sum += model(k, 1, num, x_coord, y_coord);
                 }
             std::cout << (float)time_sum / (float)accuracy << ',' << ' ';
             }
@@ -162,4 +159,3 @@ int main() {
     show();
     return 0;
 }
-*/

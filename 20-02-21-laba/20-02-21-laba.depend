@@ -1,12 +1,18 @@
 # depslib dependency file v1.0
-1645389534 source:/home/vadim/Desktop/C++/20-02-21-laba/lab.cpp
+1645393130 source:/home/vadim/Desktop/C++/20-02-21-laba/lab.cpp
 	<cmath>
 	<random>
 
-1645391803 source:/home/vadim/Desktop/C++/20-02-21-laba/lab2.cpp
+1645393130 source:/home/vadim/Desktop/C++/20-02-21-laba/lab2.cpp
+	<cmath>
+	<random>
+
+1645395749 source:/home/vadim/Desktop/C++/20-02-21-laba/lab3.cpp
+	<cmath>
+	<random>
+
+1645396100 source:/home/vadim/Desktop/C++/20-02-21-laba/lab4.cpp
 	<iostream>
 	<cmath>
 	<random>
-
-1645382448 source:/home/vadim/Desktop/C++/20-02-21-laba/lab3.cpp
 
