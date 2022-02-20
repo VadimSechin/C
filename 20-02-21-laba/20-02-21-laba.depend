@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1645377979 source:/home/vadim/Desktop/C++/20-02-21-laba/lab.cpp
+	<iostream>
+	<cmath>
+	<random>
+
