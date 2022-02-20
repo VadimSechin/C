@@ -111,15 +111,15 @@ int model(int width, int height, int num, int x_coord[], int y_coord[]) {
 void show(){
     int num = 10, time_sum = 0, accuracy = 100;
 
-    int dots_max = 15;
-    int demention_begin = 10;
+    int demention_begin = 5;
     int demention_step = 2;
-    int steps = 3;
+    int steps = 5;
+    int dots_max = num + steps;
 
-    int x_coord[demention_begin + demention_step*steps];
-    int y_coord[demention_begin + demention_step*steps];
+    int x_coord[dots_max];
+    int y_coord[dots_max];
 
-    for(int k = demention_begin; k <= demention_begin + demention_step*steps ; k += demention_step){
+    for(int k = demention_begin; k < demention_begin + demention_step*steps ; k += demention_step){
         for(int i = 1; i <= dots_max; i += 1){
             num = i;
             time_sum = 0;
