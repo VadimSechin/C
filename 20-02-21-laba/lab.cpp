@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <cmath>
 #include <random>
 
@@ -58,4 +58,4 @@ void show(){
 int main() {
     show();
     return 0;
-}*/
+}

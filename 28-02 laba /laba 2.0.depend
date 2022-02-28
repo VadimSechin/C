@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1645519713 source:/home/vadim/Desktop/C++/laba 2.0/lab.cpp
+	<iostream>
+	<cmath>
+	<random>
+
+1646078387 source:/home/vadim/Desktop/C++/28-02 laba /lab.cpp
+	<iostream>
+	<cmath>
+	<random>
+
