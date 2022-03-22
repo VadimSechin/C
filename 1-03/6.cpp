@@ -23,4 +23,5 @@ int main()
     cin >> n;
     cout << female(n)<< endl;
     cout << male(n);
+    return 0;
 }*/

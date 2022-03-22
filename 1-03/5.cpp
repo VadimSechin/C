@@ -13,6 +13,7 @@ int main()
     int N;
     cin >> N;
     cout << func(N);
+    return 0;
 
 }
 */

@@ -25,4 +25,5 @@ int main()
     int M = 0;
     int n = 0;
     func(M, n);
+    return 0;
 }*/
