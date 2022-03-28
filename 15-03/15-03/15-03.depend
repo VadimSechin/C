@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1648479397 source:/home/vadim/Desktop/C++/15-03/15-03/1.cpp
+	<iostream>
+	<cmath>
+	<typeinfo>
+
